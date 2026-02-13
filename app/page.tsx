@@ -204,28 +204,111 @@ export default function Home() {
         </div>
       </section>
 
-      {/* こんな人におすすめ */}
+      {/* こんな人には向いていません（お断り） */}
       <section className="py-20 px-4 bg-slate-800/50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            このサービスは、
-            <br />
-            <span className="text-green-400">こんな方</span>にピッタリです
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            ⚠️ 正直に言います。
           </h2>
-          <div className="grid md:grid-cols-2 gap-4">
+          <p className="text-center text-xl text-gray-300 mb-12">
+            以下に当てはまる方は、<span className="text-red-400 font-bold">購入をお控えください</span>。
+          </p>
+          <div className="space-y-4 mb-8">
             {[
-              "プログラミング学習で挫折した経験がある",
-              "作りたいサービスやアプリのアイデアがある",
-              "スクールに通う時間もお金もない",
-              "「基礎」より「実践」で学びたい",
-              "副業やビジネスで自分のサービスを持ちたい",
+              {
+                title: "「お金払ったんだから、あとはよろしく」という方",
+                desc: "僕が代わりに作るサービスではありません。一緒に作るサービスです。"
+              },
+              {
+                title: "受け身で指示待ちの方",
+                desc: "「何をすればいいですか？」ではなく「こんなの作りたい！」という想いが必要です。"
+              },
+              {
+                title: "すぐに結果を求める方",
+                desc: "3時間で「土台」は作れます。でも完璧なサービスには継続的な改善が必要です。"
+              },
+              {
+                title: "ラクして稼ぎたいだけの方",
+                desc: "Vibe Codingは魔法じゃない。学ぶ姿勢がないと、結局何も身につきません。"
+              },
+              {
+                title: "約束を守れない方",
+                desc: "日程変更の連絡なし、事前準備をしない、返信がない...お互いの時間を大切にしましょう。"
+              },
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 p-4 bg-gradient-to-r from-green-900/30 to-blue-900/30 rounded-lg"
+                className="p-5 bg-red-900/20 border border-red-500/30 rounded-lg"
               >
-                <span className="text-green-400 text-2xl">✓</span>
-                <span className="text-lg">{item}</span>
+                <div className="flex items-start gap-4">
+                  <span className="text-red-400 text-2xl flex-shrink-0">✗</span>
+                  <div>
+                    <p className="text-lg font-bold text-red-300 mb-1">{item.title}</p>
+                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="bg-slate-700/50 p-6 rounded-xl text-center">
+            <p className="text-gray-300">
+              厳しいことを言いましたが、<span className="text-yellow-400 font-bold">本気の人</span>にはとことん付き合います。
+              <br />
+              お互いにとって良い関係を築きたいから、正直に書きました。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* こんな人におすすめ */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            逆に、<span className="text-green-400">こんな方</span>には
+            <br />
+            全力でサポートします
+          </h2>
+          <p className="text-center text-xl text-gray-300 mb-12">
+            当てはまる項目が多いほど、このサービスが向いています。
+          </p>
+          <div className="space-y-4">
+            {[
+              {
+                title: "「作りたいもの」が頭にある",
+                desc: "漠然とでもOK。その想いを形にするお手伝いをします。"
+              },
+              {
+                title: "プログラミング学習で挫折した経験がある",
+                desc: "僕も7回挫折しました。だからこそ、挫折ポイントを理解しています。"
+              },
+              {
+                title: "自分でやってみる姿勢がある",
+                desc: "教わるだけじゃなく、手を動かす。その姿勢があれば伸びます。"
+              },
+              {
+                title: "完璧じゃなくても、まず動かしたい",
+                desc: "60点でもいいから公開する。その勇気がある人は強いです。"
+              },
+              {
+                title: "学んだことを誰かに還元したい",
+                desc: "自分だけじゃなく、周りも巻き込んで成長したい人、大歓迎。"
+              },
+              {
+                title: "スクールは高すぎて無理だった",
+                desc: "数十万円のスクールに通えなくても、諦める必要はありません。"
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="p-5 bg-green-900/20 border border-green-500/30 rounded-lg"
+              >
+                <div className="flex items-start gap-4">
+                  <span className="text-green-400 text-2xl flex-shrink-0">✓</span>
+                  <div>
+                    <p className="text-lg font-bold text-green-300 mb-1">{item.title}</p>
+                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
