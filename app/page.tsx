@@ -6,7 +6,7 @@ export default function Home() {
       {/* ヘッドライン */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          7回挫折した僕が、
+          <span className="text-yellow-400">Progateに7回挫折</span>した僕が、
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
             3時間でサービスを作れた理由
@@ -290,12 +290,8 @@ export default function Home() {
                 desc: "60点でもいいから公開する。その勇気がある人は強いです。"
               },
               {
-                title: "学んだことを誰かに還元したい",
-                desc: "自分だけじゃなく、周りも巻き込んで成長したい人、大歓迎。"
-              },
-              {
-                title: "スクールは高すぎて無理だった",
-                desc: "数十万円のスクールに通えなくても、諦める必要はありません。"
+                title: "副業やビジネスで自分のサービスを持ちたい",
+                desc: "自分で作ったサービスは、そのまま収益化の武器になります。"
               },
             ].map((item, index) => (
               <div
