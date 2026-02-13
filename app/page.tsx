@@ -70,11 +70,51 @@ export default function Home() {
               <br />
               約 <span className="text-yellow-400">3万円</span> 課金。
             </p>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300 mb-6">
               でも結局、何も作れなかった。
             </p>
-            <div className="mt-6 p-4 bg-slate-800 rounded-lg text-center text-gray-400">
-              📸 Progate課金履歴のスクショ（ここに挿入）
+            
+            {/* Progate課金履歴のスクショ */}
+            <div className="mt-6">
+              <p className="text-sm text-gray-400 mb-4 text-center">↓ 実際の課金履歴がこちら...</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="bg-white rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/progate-1.png"
+                    alt="Progate課金履歴1"
+                    width={300}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="bg-white rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/progate-2.png"
+                    alt="Progate課金履歴2"
+                    width={300}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="bg-white rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/progate-3.png"
+                    alt="Progate課金履歴3"
+                    width={300}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="bg-white rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/progate-4.png"
+                    alt="Progate課金履歴4"
+                    width={300}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -115,9 +155,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 p-8 rounded-2xl text-center">
-            <p className="text-xl mb-4">僕はこの方法で、</p>
-            <p className="text-2xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 p-8 rounded-2xl">
+            <p className="text-xl mb-4 text-center">僕はこの方法で、</p>
+            <p className="text-2xl font-bold mb-6 text-center">
               たった{" "}
               <span className="text-yellow-400">制作時間15時間（3日間）</span>{" "}
               で
@@ -125,8 +165,40 @@ export default function Home() {
               YouTube分析ツールを作り、実際に{" "}
               <span className="text-green-400">公開・運用</span> しています。
             </p>
-            <div className="mt-6 p-4 bg-slate-800 rounded-lg text-gray-400">
-              📸 実際に作ったサービスのスクショ（ここに挿入）
+            
+            {/* YouTube分析ツールのスクショ */}
+            <div className="space-y-4">
+              <div className="rounded-xl overflow-hidden border border-slate-600">
+                <Image
+                  src="/images/youtube-analyzer-1.png"
+                  alt="YouTube分析ツール - トップページ"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden border border-slate-600">
+                <Image
+                  src="/images/youtube-analyzer-2.png"
+                  alt="YouTube分析ツール - カテゴリ検索"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="text-center mt-4">
+                <a
+                  href="https://youtube-analyzer-pied.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 underline"
+                >
+                  🔗 実際のサービスを見る
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -474,7 +546,14 @@ export default function Home() {
             </div>
             <div className="bg-slate-800 p-4 rounded-lg">
               <p className="text-gray-400 text-sm mb-2">作ったもの</p>
-              <p className="font-bold">YouTube分析ツール（開発・運用中）</p>
+              <a
+                href="https://youtube-analyzer-pied.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-blue-400 hover:text-blue-300"
+              >
+                YouTube分析ツール（開発・運用中）→
+              </a>
             </div>
           </div>
         </div>
