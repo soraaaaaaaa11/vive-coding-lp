@@ -9,7 +9,7 @@ export default function Home() {
           <span className="text-yellow-400">Progateに7回挫折</span>した僕が、
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-            3時間でサービスを作れた理由
+            3時間でWebサービスを作れた理由
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8">
