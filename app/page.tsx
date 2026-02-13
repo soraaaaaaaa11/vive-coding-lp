@@ -580,8 +580,14 @@ export default function Home() {
 
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 p-8 rounded-2xl border border-green-500/30">
             <p className="text-xl font-bold mb-6">📱 公式LINEで無料相談する</p>
-            <div className="w-48 h-48 bg-white mx-auto rounded-xl flex items-center justify-center text-slate-800 font-bold">
-              ［ QRコード挿入 ］
+            <div className="w-48 h-48 bg-white mx-auto rounded-xl flex items-center justify-center overflow-hidden">
+              <Image
+                src="/images/line-qr.png"
+                alt="LINE公式アカウント QRコード"
+                width={192}
+                height={192}
+                className="w-full h-full object-contain"
+              />
             </div>
             <p className="text-gray-400 mt-4 text-sm">
               ↑ スマホでスキャンしてください
